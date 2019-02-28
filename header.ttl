@@ -1,0 +1,61 @@
+@prefix loci: <http://linked.data.gov.au/def/loci#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@prefix : <http://linked.data.gov.au/linkset/0854185c-a5d9-463b-b833-585dc82588f2/statement/> .
+@prefix s: <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
+@prefix p: <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
+@prefix o: <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> .
+@prefix m: <http://linked.data.gov.au/def/loci/hadGenerationMethod> .
+@prefix m1: <http://linked.data.gov.au/linkset/0854185c-a5d9-463b-b833-585dc82588f2/method/1> .
+
+@prefix mb11: <http://linked.data.gov.au/dataset/asgs2011/meshblock/> .
+@prefix mb16: <http://linked.data.gov.au/dataset/asgs2016/meshblock/> .
+@prefix over: <http://www.opengis.net/ont/geosparql#sfOverlaps> .
+@prefix c: <http://linked.data.gov.au/dataset/geofabric/catchment/> .
+@prefix i: <http://linked.data.gov.au/linkset/bhafvq/SpatialIntersection> .
+@prefix geox: <http://linked.data.gov.au/def/geox#> .
+@prefix nv: <http://qudt.org/schema/qudt#numericValue> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+
+<http://linked.data.gov.au/linkset/0854185c-a5d9-463b-b833-585dc82588f2> 
+  a loci:Linkset ;
+  dct:title "Meshblocks 2011/2016 Correspondences by area" ;
+  dct:description """"""@en ;
+  dct:publisher <http://catalogue.linked.data.gov.au/org/O-000928> ;
+  dc:publisher "Australian Bureau of Statistics" ;
+  dcat:contactPoint _:marcus ;
+  dct:issued "2019-03-01"^^xsd:date ;
+  dct:modified "2019-03-01"^^xsd:date ;
+  dct:contributor _:shane ;
+  void:subjectsTarget <http://linked.data.gov.au/dataset/asgs2011> ;
+  void:objectsTarget <http://linked.data.gov.au/dataset/asgs2016> ;
+  prov:wasGeneratedBy _:act .
+
+_:act a prov:Activity; 
+    prov:qualifiedAssociation [
+        a prov:Association;
+        prov:agent   _:marcus;
+        prov:hadPlan _:m1
+    ] . 
+
+m1: a prov:Plan ;
+    rdfs:label "ABS' internal MeshBlock intersection" ;
+    prov:wasAttributedTo _:marcus ;
+    prov:generatedAtTime "2019-02-27"^^xsd:date .
+
+_:marcus a vcard:Individual ;
+    vcard:fn "Marcus Blake" ;
+    vcard:hasEmail <mailto:marcus.blake@abs.gov.au> .
+        
+_:shane a vcard:Individual ;
+    vcard:fn "Shane Seaton" ;
+    vcard:hasEmail <mailto:shane.seaton@csiro.au> .
