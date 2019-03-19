@@ -1,0 +1,14 @@
+# Method (procedure) description for ASGS Meshblock 2011 to 2016 via area correspondance linkset
+
+Using the area based correspondance tables from the ABS for 2011 to 2016, we get the proportion of a 2011 meshblock dontated to a corresponding 2016 meshblock.
+
+This proportion is used to calculate the absolute area by multiplying it against the `Shape_Area` from the 2011 meshblock WFS service (https://geo.abs.gov.au/arcgis/services/ASGS2011/MB/MapServer/WFSServer?service=wfs&version=2.0.0&request=GetCapabilities).
+
+Using this absolute area, we create a conceptual feature (an intersecting feature), with an area attribute, and associate both the 2011 and 2016 meshblocks with this new feature via an `sfContains` relationship.
+
+The code used to create this linkset can be found at https://github.com/CSIRO-enviro-informatics/mb16mb11-tooling the area correspndance tables must be asked for from the ABS.
+
+Notes:
+It should be noted that there are a lot of 2011 meshblocks that donate more than 99.5% of there area to the 2016 meshblock. For all intents and purposes these should be considered the same. They are essentially the same geometry even, however they are defined with slightly more or less vector points which account for the small errors in area. The linkset doesn't not reflect this yet and uses the 99.5%+ value instead of making the assertion that it is 100%. This is likely to change in a future version of the product. Similar for tiny areas of overlap.
+
+Generally, 100% of a 2011 polygon is donated to one or more 2016 meshblocks. Occasionally a portion is donated to 'null' and they have been omitted in this linkset.

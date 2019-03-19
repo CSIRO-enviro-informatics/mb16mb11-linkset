@@ -9,6 +9,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dbp: <http://dbpedia.org/property/> .
 
 @prefix : <http://linked.data.gov.au/linkset/0854185c-a5d9-463b-b833-585dc82588f2/statement/> .
 @prefix s: <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
@@ -20,11 +21,12 @@
 @prefix mb11: <http://linked.data.gov.au/dataset/asgs2011/meshblock/> .
 @prefix mb16: <http://linked.data.gov.au/dataset/asgs2016/meshblock/> .
 @prefix over: <http://www.opengis.net/ont/geosparql#sfOverlaps> .
-@prefix c: <http://linked.data.gov.au/dataset/geofabric/catchment/> .
+@prefix c: <http://www.opengis.net/ont/geosparql#sfContains> .
 @prefix i: <http://linked.data.gov.au/linkset/bhafvq/SpatialIntersection> .
 @prefix geox: <http://linked.data.gov.au/def/geox#> .
+@prefix m2: <http://qudt.org/schema/qudt#SquareMeter> .
 @prefix nv: <http://qudt.org/schema/qudt#numericValue> .
-@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qu: <http://qudt.org/schema/qudt#unit> .
 
 <http://linked.data.gov.au/linkset/0854185c-a5d9-463b-b833-585dc82588f2> 
   a loci:Linkset ;
@@ -49,6 +51,8 @@ _:act a prov:Activity;
 
 m1: a prov:Plan ;
     rdfs:label "ABS' internal MeshBlock intersection" ;
+    prov:value <https://github.com/CSIRO-enviro-informatics/mb16mb11-linkset/master/proc-conversion-method.txt> ;
+    rdfs:comment "The method used to encode ABS area correspondances for meshblocks from 2011 --> 2016 in a linkset" ;
     prov:wasAttributedTo _:marcus ;
     prov:generatedAtTime "2019-02-27"^^xsd:date .
 
