@@ -1,4 +1,4 @@
-# Meshblocks 2011/2016 Linkset
+# Meshblocks 2011 to Meshblocks 2016 Linkset
 Links between [ASGS 2011](http://linked.data.gov.au/dataset/asgs2011) Meshblocks ([def](http://linked.data.gov.au/def/asgs#MeshBlock)) features and [ASGS 2016](http://linked.data.gov.au/dataset/asgs2016) Meshblocks ([def](http://linked.data.gov.au/def/asgs#MeshBlock)).
 
 The links are expressed as feature-to-feature relationships - [RDF](https://www.w3.org/2001/sw/wiki/RDF) statements - using *Simple Features* relationships from, or derived from, the [GeoSPARQL ontology](https://en.wikipedia.org/wiki/GeoSPARQL). `sfContains` from GeoSAPRQL are used. 
