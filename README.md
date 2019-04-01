@@ -12,7 +12,7 @@ http://linked.data.gov.au/def/loci
 
 
 ## Repository Contents  
-* [data.ttl.tar.gz](data.ttl.tar.gz) - this Linkset’s main data file. It is a compressed RDF turtle files
+* [data.ttl.gz](data.ttl.gz) - this Linkset’s main data file. It is a compressed RDF turtle files
 * [header.ttl](header.ttl) - this Linkset’s data.ttl header information, stored separately for ease of access
 * [example-data.ttl](example-data.ttl) - 10 Statements from the Linkset for ease of access, in RDF (turtle) format, as per the main data file
 * [README.md](README.md) - this file
