@@ -52,7 +52,7 @@ _:act a prov:Activity;
 
 m1: a prov:Plan ;
     rdfs:label "ABS' internal MeshBlock intersection" ;
-    prov:value <https://github.com/CSIRO-enviro-informatics/mb16mb11-linkset/master/methods/proc-conversion-method.txt> ;
+    prov:value <https://github.com/CSIRO-enviro-informatics/mb16mb11-linkset/blob/master/methods/proc-conversion-method.txt> ;
     rdfs:comment "The method used to encode ABS area correspondances for meshblocks from 2011 --> 2016 in a linkset" ;
     prov:wasAttributedTo _:marcus ;
     prov:generatedAtTime "2019-02-27"^^xsd:date .
