@@ -160,11 +160,11 @@ A series of queries to calculate Linkset metrics is being prepared here: <https:
 ### This Linkset’s metrics
 **Metric** | **Value**
 -- | --
-Number of links | 14878851
+Number of links | *not yet calculated*
 Number of items in Dataset A (from) not linked | *not yet calculated* 
 Number of items in Dataset B (to) not linked | *not yet calculated*
-Number of link creation methods used | 5
-Numbers of uses of each link-creation method | m1: 14148793<br />m2: 185588<br />m3: 89482<br />m4: 392138<br />m5: 62849
+Number of link creation methods used | 1
+Numbers of uses of each link-creation method | m1: *not yet calculated*
 
 
 ## Rights & License
