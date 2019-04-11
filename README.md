@@ -32,7 +32,7 @@ Where LocI objects across multiple datasets have spatial relationships that we w
 Some LocI Datasets, such as the ASGS, have multiple, independently delivered versions (the ASGS is released as a Linked Data Datasets in both [2011](http://linked.data.gov.au/dataset/asgs2011) and [2016](http://linked.data.gov.au/dataset/asgs2016) versions). Linksets can be used to link between these versions of a Dataset too. This allows for information such as correspondence tables (links between ASGS versions, published by the Australian Bureau of Statistics) to be published as Linked Data independently of any other Dataset.
 
 ### This Linkset
-This Linkset - Mesh Blocks 2011 to Mesh Blocks 2016 Linkset - is a spatial relations Linkset linking Mesh Blocks in the 2011 ASGS to Mesh Blcoks in the 2016 ASG (both polygons). Many Mesh Blocks are essentially the same in both datasets but there are other proportional overlaps too. Porportional overlaps between Mesh Blocks are described by both the From and To Mesh Blocks *containing* an intermediate polygon that is their intersection. Since the areas of all Mesh Blocks are known from their Datasets (ASGS 2011 & 2016), only the area of the intersecting polygon is recorded in this Linkset.
+This Linkset - Mesh Blocks 2011 to Mesh Blocks 2016 Linkset - is a spatial relations Linkset linking Mesh Blocks in the 2011 ASGS to Mesh Blcoks in the 2016 ASG (both polygons). Many Mesh Blocks are essentially the same in both datasets but there are other proportional overlaps too. Proportional overlaps between Mesh Blocks are described by both the From and To Mesh Blocks *containing* an intermediate polygon that is their intersection. Since the areas of all Mesh Blocks are known from their Datasets (ASGS 2011 & 2016), only the area of the intersecting polygon is recorded in this Linkset.
 
 The link for *Mesh Block 2011:80056497700* -> *Mesh Block 2016:80056497700* reads in 3 parts like this:
 
@@ -46,7 +46,7 @@ Mesh Block **2016:80056497700**
 *contains*  
 Intersection polygon **i1**  
 
-Thus **2011:80056497700** overlaps **2016:80056497700** by 53.19m^2  which, by using the areas of each Mesh Block, can be expressed as a ration in either direction.
+Thus **2011:80056497700** overlaps **2016:80056497700** by 53.19m^2  which, by using the areas of each Mesh Block, can be expressed as a relation in either direction.
 
 
 ## How is a Linkset’s data organised?

@@ -6,9 +6,15 @@ This proportion is used to calculate the absolute area by multiplying it against
 
 Using this absolute area, we create a conceptual feature (an intersecting feature), with an area attribute, and associate both the 2011 and 2016 meshblocks with this new feature via an `sfContains` relationship.
 
-The code used to create this linkset can be found at https://github.com/CSIRO-enviro-informatics/mb16mb11-tooling the area correspndance tables must be asked for from the ABS.
+It should be noted that there are a lot of 2011 meshblocks that donate more than 99.5% of there area to the 2016 meshblock. For all intents and purposes these should be considered the same. They are essentially the same geometry even, however they are defined with slightly more or less vector points which account for the small errors in area. As a result, we create `sfEquals` relationships in these cases. At this stage, when a MB2011 donates more than 99.5+, then remaining small bit or bits then deleted (ignored). 
+
+In a similar vein, the records in the correspondance marked as "Below minimum output size" have also been omitted from this linkset.
+
+The code used to create this linkset can be found at https://github.com/CSIRO-enviro-informatics/mb16mb11-tooling the area correspondance tables must be asked for from the ABS.
+
+
 
 Notes:
-It should be noted that there are a lot of 2011 meshblocks that donate more than 99.5% of there area to the 2016 meshblock. For all intents and purposes these should be considered the same. They are essentially the same geometry even, however they are defined with slightly more or less vector points which account for the small errors in area. The linkset doesn't not reflect this yet and uses the 99.5%+ value instead of making the assertion that it is 100%. This is likely to change in a future version of the product. Similar for tiny areas of overlap.
+There are cases for when a 2011 meshblock donates to multiple 2016 meshblocks, and there are little remnant areas less than 0.5% in areas. These are a little harder to trim out, as it's not easy to identify which 2016 meshblock they should be absorbed into. As such, these tiny donatations have been left in the dataset. 
 
 Generally, 100% of a 2011 polygon is donated to one or more 2016 meshblocks. Occasionally a portion is donated to 'null' and they have been omitted in this linkset.

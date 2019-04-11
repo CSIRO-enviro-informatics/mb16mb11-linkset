@@ -20,8 +20,8 @@
 
 @prefix mb11: <http://linked.data.gov.au/dataset/asgs2011/meshblock/> .
 @prefix mb16: <http://linked.data.gov.au/dataset/asgs2016/meshblock/> .
-@prefix over: <http://www.opengis.net/ont/geosparql#sfOverlaps> .
 @prefix c: <http://www.opengis.net/ont/geosparql#sfContains> .
+@prefix e: <http://www.opengis.net/ont/geosparql#sfEquals> .
 @prefix f: <http://www.opengis.net/ont/geosparql#Feature> .
 @prefix i: <http://linked.data.gov.au/linkset/bhafvq/SpatialIntersection> .
 @prefix geox: <http://linked.data.gov.au/def/geox#> .
