@@ -1,4 +1,4 @@
-@prefix loci: <http://linked.data.gov.au/def/loci#> .
+@prefix loci: <https://linked.data.gov.au/def/loci#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -10,37 +10,38 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix dbp: <http://dbpedia.org/property/> .
+@prefix sdo: <https://schema.org/> ;
 
-@prefix : <http://linked.data.gov.au/linkset/0854185c-a5d9-463b-b833-585dc82588f2/statement/> .
+@prefix : <https://linked.data.gov.au/linkset/0854185c-a5d9-463b-b833-585dc82588f2/statement/> .
 @prefix s: <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> .
 @prefix p: <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> .
 @prefix o: <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> .
-@prefix m: <http://linked.data.gov.au/def/loci/hadGenerationMethod> .
-@prefix m1: <http://linked.data.gov.au/linkset/0854185c-a5d9-463b-b833-585dc82588f2/method/1> .
+@prefix m: <https://linked.data.gov.au/def/loci/hadGenerationMethod> .
+@prefix m1: <https://linked.data.gov.au/dataset/mb16mb11/method/1> .
 
-@prefix mb11: <http://linked.data.gov.au/dataset/asgs2011/meshblock/> .
-@prefix mb16: <http://linked.data.gov.au/dataset/asgs2016/meshblock/> .
+@prefix mb11: <https://linked.data.gov.au/dataset/asgs2011/meshblock/> .
+@prefix mb16: <https://linked.data.gov.au/dataset/asgs2016/meshblock/> .
 @prefix c: <http://www.opengis.net/ont/geosparql#sfContains> .
 @prefix e: <http://www.opengis.net/ont/geosparql#sfEquals> .
 @prefix f: <http://www.opengis.net/ont/geosparql#Feature> .
-@prefix i: <http://linked.data.gov.au/linkset/bhafvq/SpatialIntersection> .
-@prefix geox: <http://linked.data.gov.au/def/geox#> .
+@prefix i: <https://linked.data.gov.au/linkset/bhafvq/SpatialIntersection> .
+@prefix geox: <https://linked.data.gov.au/def/geox#> .
 @prefix m2: <http://qudt.org/schema/qudt#SquareMeter> .
 @prefix nv: <http://qudt.org/schema/qudt#numericValue> .
 @prefix qu: <http://qudt.org/schema/qudt#unit> .
 
-<http://linked.data.gov.au/linkset/0854185c-a5d9-463b-b833-585dc82588f2> 
+<https://linked.data.gov.au/dataset/mb16mb11> 
   a loci:Linkset ;
   dct:title "Meshblocks 2011/2016 Correspondences by area" ;
   dct:description """"""@en ;
-  dct:publisher <http://catalogue.linked.data.gov.au/org/O-000928> ;
-  dc:publisher "Australian Bureau of Statistics" ;
+  dct:publisher <https://linked.data.gov.au/org/abs> ;
+  dct:creator <https://linked.data.gov.au/org/csiro> ;
   dcat:contactPoint _:marcus ;
   dct:issued "2019-03-01"^^xsd:date ;
   dct:modified "2019-03-01"^^xsd:date ;
   dct:contributor _:shane ;
-  void:subjectsTarget <http://linked.data.gov.au/dataset/asgs2011> ;
-  void:objectsTarget <http://linked.data.gov.au/dataset/asgs2016> ;
+  void:subjectsTarget <https://linked.data.gov.au/dataset/asgs2011> ;
+  void:objectsTarget <https://linked.data.gov.au/dataset/asgs2016> ;
   prov:wasGeneratedBy _:act .
 
 _:act a prov:Activity; 
@@ -57,10 +58,10 @@ m1: a prov:Plan ;
     prov:wasAttributedTo _:marcus ;
     prov:generatedAtTime "2019-02-27"^^xsd:date .
 
-_:marcus a vcard:Individual ;
-    vcard:fn "Marcus Blake" ;
-    vcard:hasEmail <mailto:marcus.blake@abs.gov.au> .
+_:marcus a ado:Person ;
+    sdo:name "Marcus Blake" ;
+    sdo:email "marcus.blake@abs.gov.au"^^xsd:anyURI .
         
-_:shane a vcard:Individual ;
-    vcard:fn "Shane Seaton" ;
-    vcard:hasEmail <mailto:shane.seaton@csiro.au> .
+_:shane a sdo:Person ;
+    sdo:name "Shane Seaton" ;
+    sdo:email "shane.seaton@csiro.au"^^xsd:anyURI .
